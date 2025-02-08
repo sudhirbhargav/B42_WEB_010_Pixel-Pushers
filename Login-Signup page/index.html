@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <button class="open-btn" onclick="showForm()">Login / Signup</button>
+
+    <div class="container hidden" id="form-container">
+        <h2>Welcome to Airbnb</h2>
+
+        <select id="country">
+            <option value="+91">India (+91)</option>
+            <option value="+1">USA (+1)</option>
+            <option value="+44">UK (+44)</option>
+        </select>
+
+        <input type="tel" id="phone" placeholder="Phone number" required>
+        <button class="continue-btn" onclick="sendOTP()">Continue</button>
+        <div id="recaptcha-container"></div>  
+
+        <p>or</p>
+        <input type="text" id="otp" placeholder="Enter OTP">
+        <button onclick="verifyOTP()">Verify OTP</button>
+
+        <button class="social-button" onclick="signInWithGoogle()">
+            <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="google"> Continue with Google
+        </button>
+
+        <button class="social-button" onclick="signInWithApple()">
+            <img src="https://img.icons8.com/?size=100&id=17843&format=png&color=000000" alt="apple"> Continue with Apple
+        </button>
+
+        <button class="social-button" onclick="signInWithEmail()">
+            <img src="https://img.icons8.com/?size=100&id=85559&format=png&color=000000" alt="Email"> Continue with Email
+        </button>
+
+        <button class="social-button" onclick="signInWithFacebook()">
+            <img src="https://img.icons8.com/?size=100&id=59780&format=png&color=000000" alt="Facebook"> Continue with Facebook
+        </button>
+
+        <p id="message"></p>
+
+        
+    </div>
+</body>
+</html>
